@@ -15,8 +15,8 @@ public class UserController {
 
 	@RequestMapping(method=RequestMethod.GET)
 	public @ResponseBody User getHobby(
-			@RequestParam(value="name", required=false, defaultValue="Toto") String username,
-			@RequestParam(value="name", required=false, defaultValue="Video games") String hobby){
+			@RequestParam(value="username", required=false, defaultValue="Toto") String username,
+			@RequestParam(value="hobby", required=false, defaultValue="Video games") String hobby){
 		return new User(username, hobby);
 	}
 }
